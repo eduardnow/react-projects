@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import HelloWorld from "./HelloWorld";
 import PropertiesComponent from "./components/PropertiesComponent";
 import ManageStateComponent from "./components/ManageStateComponent";
+import ChildrenComponent from "./components/ChildrenComponent";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -13,6 +14,8 @@ ReactDOM.render(
         <PropertiesComponent cat={5}/>
 
         <ManageStateComponent/>
+
+        <ChildrenComponent/>
     </React.StrictMode>,
     document.getElementById('root')
 );
