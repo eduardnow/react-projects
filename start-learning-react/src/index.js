@@ -4,12 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HelloWorld from "./HelloWorld";
 import PropertiesComponent from "./components/PropertiesComponent";
+import ManageStateComponent from "./components/ManageStateComponent";
 
 ReactDOM.render(
     <React.StrictMode>
         <HelloWorld/>
 
         <PropertiesComponent cat={5}/>
+
+        <ManageStateComponent/>
     </React.StrictMode>,
     document.getElementById('root')
 );
