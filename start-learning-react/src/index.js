@@ -6,16 +6,20 @@ import HelloWorld from "./HelloWorld";
 import PropertiesComponent from "./components/PropertiesComponent";
 import ManageStateComponent from "./components/ManageStateComponent";
 import ChildrenComponent from "./components/ChildrenComponent";
+import AccessNestedDataComponent from "./components/AccessNestedDataComponent";
 
 ReactDOM.render(
     <React.StrictMode>
         <HelloWorld/>
-
+        <hr/>
         <PropertiesComponent cat={5}/>
-
+        <hr/>
         <ManageStateComponent/>
-
+        <hr/>
         <ChildrenComponent/>
+        <hr/>
+        <AccessNestedDataComponent/>
+        <hr/>
     </React.StrictMode>,
     document.getElementById('root')
 );
