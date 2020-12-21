@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HelloWorld from "./HelloWorld";
+import PropertiesComponent from "./components/PropertiesComponent";
 
 ReactDOM.render(
     <React.StrictMode>
         <HelloWorld/>
+
+        <PropertiesComponent cat={5}/>
     </React.StrictMode>,
     document.getElementById('root')
 );
