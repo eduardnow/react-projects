@@ -8,6 +8,7 @@ import ManageStateComponent from "./components/ManageStateComponent";
 import ChildrenComponent from "./components/ChildrenComponent";
 import AccessNestedDataComponent from "./components/AccessNestedDataComponent";
 import CustomPropTypeValidationComponent from "./components/CustomPropTypeValidationComponent";
+import NormalizeEventsComponent from "./components/NormalizeEventsComponent";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -22,6 +23,8 @@ ReactDOM.render(
         <AccessNestedDataComponent/>
         <hr/>
         <CustomPropTypeValidationComponent/>
+        <hr/>
+        <NormalizeEventsComponent/>
         <hr/>
     </React.StrictMode>,
     document.getElementById('root')
