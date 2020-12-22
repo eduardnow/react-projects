@@ -1,0 +1,29 @@
+{
+  "name": "designing-react-components",
+  "version": "1.0.0",
+  "description": "Designing React Components",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eduardnow/react-projects.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Eduard Castro <eduard.cas07@gmail.com> (http://eduardnow.tech/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eduardnow/react-projects/issues"
+  },
+  "homepage": "https://github.com/eduardnow/react-projects#readme",
+  "dependencies": {
+    "next": "10.0.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  }
+}
