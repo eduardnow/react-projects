@@ -53,12 +53,6 @@ const Speakers = () => {
         const toggledSpeaker = toggleSpeakerFavorite(speaker);
         const speakerIndex = speakers.map(speakerRec => speakerRec.id).indexOf(speaker.id);
 
-        console.log(toggledSpeaker);
-        console.log(speakerIndex);
-        console.log([...speakers.slice(0, speakerIndex)]);
-        console.log(toggledSpeaker);
-        console.log([...speakers.slice(speakerIndex + 1)]);
-
         setSpeakers([...speakers.slice(0, speakerIndex), toggledSpeaker, ...speakers.slice(speakerIndex + 1)]);
     };
 
