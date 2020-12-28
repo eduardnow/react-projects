@@ -3,7 +3,7 @@ import SpeakerSearchBar from "../SpeakerSearchBar/SpeakerSearchBar";
 import {useState} from "react";
 
 const Speakers = () => {
-    const speakers = [
+    const speakersArray = [
         {
             imageSrc: 'speaker-component-1124',
             name: 'Douglas Crockford',
@@ -42,7 +42,28 @@ const Speakers = () => {
         },
     ];
 
+    const toggleSpeakerFavorite = speaker => {
+        return {
+            ...speaker,
+            isFavorite: !speaker.isFavorite,
+        }
+    };
+
+    const onFavoriteToggleHandler = speaker => {
+        const toggledSpeaker = toggleSpeakerFavorite(speaker);
+        const speakerIndex = speakers.map(speakerRec => speakerRec.id).indexOf(speaker.id);
+
+        console.log(toggledSpeaker);
+        console.log(speakerIndex);
+        console.log([...speakers.slice(0, speakerIndex)]);
+        console.log(toggledSpeaker);
+        console.log([...speakers.slice(speakerIndex + 1)]);
+
+        setSpeakers([...speakers.slice(0, speakerIndex), toggledSpeaker, ...speakers.slice(speakerIndex + 1)]);
+    };
+
     const [searchQuery, setSearchQuery] = useState("");
+    const [speakers, setSpeakers] = useState(speakersArray);
 
     return (
         <div>
@@ -54,7 +75,7 @@ const Speakers = () => {
 
                     return searchQuery.length === 0 ? true : targetString.includes(searchQuery.toLowerCase());
                 }).map((speaker) => (
-                    <Speaker key={speaker.id} {...speaker}/>
+                    <Speaker key={speaker.id} {...speaker} onFavoriteToggle={() => onFavoriteToggleHandler(speaker)}/>
                 ))}
             </div>
         </div>
